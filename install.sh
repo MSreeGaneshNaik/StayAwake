@@ -7,14 +7,10 @@ OWNER="MSreeGaneshNaik"
 REPO="StayAwake"
 APP_DIR="/Applications/StayAwake.app"
 
-echo "Fetching latest StayAwake release..."
-RELEASE_JSON=$(curl -fsSL "https://api.github.com/repos/$OWNER/$REPO/releases/latest")
-ZIP_URL=$(echo "$RELEASE_JSON" | grep -o '"browser_download_url": *"[^"]*\.zip"' | sed -E 's/.*"(https[^"]+)"/\1/')
-
-if [ -z "$ZIP_URL" ]; then
-    echo "error: could not find a .zip asset on the latest release" >&2
-    exit 1
-fi
+# GitHub's stable "latest release" redirect for a known asset name — avoids the
+# api.github.com endpoint entirely, so it isn't subject to the unauthenticated
+# REST API's 60-requests-per-hour-per-IP rate limit.
+ZIP_URL="https://github.com/$OWNER/$REPO/releases/latest/download/StayAwake.app.zip"
 
 TMP_DIR=$(mktemp -d)
 trap 'rm -rf "$TMP_DIR"' EXIT
