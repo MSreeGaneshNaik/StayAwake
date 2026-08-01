@@ -1,9 +1,9 @@
 #!/bin/bash
 # Downloads the latest StayAwake release and installs it to /Applications.
-#   curl -fsSL https://raw.githubusercontent.com/OWNER/StayAwake/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/MSreeGaneshNaik/StayAwake/main/install.sh | bash
 set -euo pipefail
 
-OWNER="OWNER"   # TODO: replace with your GitHub username/org once the repo exists
+OWNER="MSreeGaneshNaik"
 REPO="StayAwake"
 APP_DIR="/Applications/StayAwake.app"
 
