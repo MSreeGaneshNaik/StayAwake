@@ -1,4 +1,4 @@
-# StayAwake
+# StayAwake ☕️
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/MSreeGaneshNaik/StayAwake)](https://github.com/MSreeGaneshNaik/StayAwake/releases/latest)
