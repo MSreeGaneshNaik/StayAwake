@@ -75,10 +75,6 @@ The honest pitch for StayAwake isn't "does more" — Amphetamine's automation tr
 | Open source | ✅ | closed (Apple) | ❌ | ✅ (MIT) |
 | Codebase size | ~270 lines Swift, 0 dependencies | N/A (Apple system binary) | closed — size unknown | wraps `caffeinate` + a larger automation engine |
 | Documented crash-safety guarantee | ✅ — [state-machine invariants](docs/ARCHITECTURE.md#state-machine) + [crash-recovery design](docs/ARCHITECTURE.md#crash-recovery) written up, not just asserted | N/A (stateless, no persistent setting to strand) | not publicly documented | not publicly documented |
-| Conditional/automated triggers (app, network, schedule) | ❌ — manual toggle only, tracked in [Roadmap](#roadmap) | ❌ | ✅ (its main differentiator) | ❌ |
-| Code-signed & notarized | ❌ — not yet, tracked in [Roadmap](#roadmap) | ✅ (Apple) | ✅ (Mac App Store) | ✅ |
-| Telemetry | None (declared in [SECURITY.md](SECURITY.md)) | N/A | not publicly disclosed | not publicly disclosed |
-| Price | Free | Free (built-in) | Free | Free |
 
 If what you need is scheduling and app-aware automation, Amphetamine is the more mature choice today. If what you need is lid-closed sleep prevention from something small enough to fully audit yourself before trusting it with an admin prompt, that's what StayAwake is built for.
 
