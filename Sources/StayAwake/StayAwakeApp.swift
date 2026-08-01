@@ -57,7 +57,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func updateUI() {
         let state: StatusIconState = controller.isOn ? .on : .off
         if let button = statusItem.button {
-            button.title = state.menuBarGlyph
+            button.image = state.icon
             button.toolTip = state.accessibilityDescription
         }
         toggleItem.state = controller.isOn ? .on : .off

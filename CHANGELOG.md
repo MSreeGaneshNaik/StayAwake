@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+- Menu bar icon is now a hand-drawn cup instead of a text emoji: empty outline when off, filled with steam wisps when on. Still self-drawn (no bundled asset/SF Symbol lookup) to preserve the crash-proof rendering property from 0.1.0.
+
 ## [0.1.0] - 2026-08-01
 
 ### Added
